@@ -1,0 +1,1 @@
+function up(s){s.preventDefault(),alert("hola mundo")}var bootstrap="./node_modules/bootstrap-sass/assets/javascripts/bootstrap";

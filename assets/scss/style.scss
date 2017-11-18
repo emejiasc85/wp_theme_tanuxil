@@ -1,0 +1,30 @@
+/*!
+Theme Name: tanuxil
+Theme URI: http://underscores.me/
+Author: emejias
+Author URI: http://emejias.com
+Description: tanuxil wp theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: tanuxil
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+tanuxil is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import 'custom_variables';
+@import 'mixins';
+@import 'functions';
+@import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap-compass';
+@import './node_modules/font-awesome-sass/assets/stylesheets/font-awesome';
+@import './node_modules/slick-carousel/slick/slick.scss';
+@import 'custom';

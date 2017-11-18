@@ -1,0 +1,41 @@
+{
+  "name": "tanuxil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emejiasc85/tanuxil.git"
+  },
+  "author": "emejias.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emejiasc85/tanuxil/issues"
+  },
+  "homepage": "https://github.com/emejiasc85/tanuxil#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome-sass": "^4.7.0",
+    "jquery": "^3.1.1",
+    "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-watch": "^4.3.11",
+    "vinyl-source-stream": "^1.1.0",
+    "yargs": "^6.6.0"
+  }
+}
