@@ -1,3 +1,4 @@
+
 .absolute{
 	position: absolute;
 }
@@ -16,6 +17,18 @@
 		img{
 			width: 125px
 		}
+	}
+	.custom-logo-link{
+		float: left;
+		padding: 15px 15px;
+		font-size: 18px;
+		line-height: 20px;
+		height: 50px;
+		.custom-logo{
+			width: 125px ;
+			height: auto;
+		}
+
 	}
 	.navbar-nav{
 		li>a{
@@ -54,7 +67,9 @@
 		}
 	}
 }
-
+.navbar-right{
+	margin-right: 1px;
+}
 .navbar-toggle {
     border-color: transparent !important;
     &:hover,
