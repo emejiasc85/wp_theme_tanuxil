@@ -21,13 +21,53 @@
 </head>
 
 <body <?php body_class(); ?>>
+<nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+					<?php the_custom_logo(); ?>
+                </a>
+
+                <a href="donar.html" class="btn btn-primary navbar-btn pull-right hidden-md hidden-lg" type="button">Donar</a>
+
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<a href="donar.html" class="btn btn-primary navbar-btn hidden-xs hidden-sm" type="button">Donar</a>
+				</ul>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'navbar',
+						//'container'         => 'div',
+						//'container_class'   => 'collapse navbar-collapse',
+						'menu_class'        => 'nav navbar-nav navbar-right',
+						'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'            => new WP_Bootstrap_Navwalker()					
+					) );
+				?>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tanuxil' ); ?></a>
+	<!--
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tanuxil' ); ?></a>
+	-->
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
+			//the_custom_logo();
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
