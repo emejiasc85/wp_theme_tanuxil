@@ -14,6 +14,10 @@
 
 get_header(); ?>
 
+	<?php 
+		//slider
+		echo do_shortcode('[slick-slider category="3" design="design-1" sliderheight="800" show_content="true"]'); 
+	?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
