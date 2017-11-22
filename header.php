@@ -34,7 +34,7 @@
 					<?php the_custom_logo(); ?>
                 </a>
 
-                <a href="donar.html" class="btn btn-primary navbar-btn pull-right hidden-md hidden-lg" type="button">Donar</a>
+                <a href="<?php echo get_page_link(27) ?>" class="btn btn-primary navbar-btn pull-right hidden-md hidden-lg" type="button">Donar</a>
 
             </div>
 
@@ -50,7 +50,7 @@
 						//'container_class'   => 'collapse navbar-collapse',
 						'menu_class'        => 'nav navbar-nav navbar-right',
 						'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-						'walker'            => new WP_Bootstrap_Navwalker()					
+						'walker'            => new WP_Bootstrap_Navwalker()
 					) );
 				?>
             </div><!--/.nav-collapse -->
