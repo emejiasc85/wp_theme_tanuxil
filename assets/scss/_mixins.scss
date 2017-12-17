@@ -10,7 +10,6 @@
 	    	width: 100%;
 	    	box-shadow: 0px 4px 6px #888888 !important;
 	    }
-
 	    .mask{
 	    	position: absolute;
 	    	top: 0;
@@ -19,7 +18,7 @@
 	    	left: 0;
 			background-color: $bg;
 			opacity: .8;
-			text-align: center;
+			//text-align: center;
 			color: set-text-color($main-color) !important;
 			h3{
 				margin: 0px;
@@ -54,28 +53,49 @@
 }
 
 @mixin btn-services($bg){
-	bottom: -3em;
-	left: 50px;
-    right: 50px;
-    margin: auto auto;
-	margin:  10px;
-	text-align: center;
-	padding: 10px 12px;
-	border-radius: 50px;
-	background: #dddddd;
-	box-shadow: inset 0 3px 2px grey;
-	.btn-primary{
-		border:{
-			radius: 50px;
-			color: transparent;
-		};
-		box-shadow: 0 0 4px grey;
-		background-color: $bg;
-		text-transform: uppercase;
-		&:hover{
-			background-color:darken($bg, .7);
-		}
+
+	display: inline-block;
+	background-color: $bg;
+	padding: 4px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: sans-serif;
+	text-decoration: none;
+	border-radius: 6px;
+	position: relative;
+	
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		background-color: white;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 6px;
+		box-shadow: inset 2px 1px 4px rgba(0, 0, 0, 0.3);
 	}
+	
+	span {
+		display: block;
+		background-color: $bg;
+		position: relative;
+		z-index: 2;
+		width: 92px;
+		height: 28px;
+		line-height: 28px;
+		text-align: center;
+		border-radius: 4px;
+		box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+	}
+	
+	
+	
+	
+	
 }
 @mixin table-services($bg){
 	td{

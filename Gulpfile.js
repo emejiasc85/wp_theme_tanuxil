@@ -89,12 +89,12 @@ gulp.task('watch', function () {
 
 gulp.task('browsersync',['compress', 'style'], function () {
 	sync.init({
-		proxy: "tanuxil-wp.dev",
+		proxy: "tanuxil-wp.em",
 		browser: "google chrome"
 	});
 
 	gulp.watch('./*.html').on('change', sync.reload);
-	gulp.watch('./*.php').on('change', sync.reload);
+	gulp.watch('./**/*.php').on('change', sync.reload);
 	gulp.watch(config.scssDir + '/**/*.scss', ['style']);
 	gulp.watch(config.jsDir +'/*.js', ['js-sync'])
 

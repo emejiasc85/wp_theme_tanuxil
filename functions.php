@@ -7,7 +7,7 @@
  * @package tanuxil
  */
 
-if ( ! function_exists( 'tanuxil_setup' ) ) :
+if ( ! function_exists( 'tanuxil_setup' ) ):
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -16,6 +16,8 @@ if ( ! function_exists( 'tanuxil_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function tanuxil_setup() {
+		update_option( 'siteurl', 'http://tanuxil-wp.em' );
+		update_option( 'home', 'http://tanuxil-wp.em' );
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -41,6 +43,10 @@ if ( ! function_exists( 'tanuxil_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		/**
+		 * add new cutter for images upload
+		 */
+		add_image_size( '460-245', 460, 245, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -121,7 +127,7 @@ function tanuxil_scripts() {
 
 	wp_enqueue_script( 'jq', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.js', array(), '20151215', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', array(), '20151215', true );
-	wp_enqueue_script( 'slick', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.js', array(), '20151215', true );
+	//wp_enqueue_script( 'slick', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.js', array(), '20151215', true );
 	
 	wp_enqueue_script( 'tanuxil-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

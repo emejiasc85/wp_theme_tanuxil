@@ -21,40 +21,103 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+		<section class="section-notices">
+			<div class="container">
+				<div class="row">
+					<h2>Noticias</h2>
+					<?php
+					if ( have_posts() ) :
+						
+						if ( is_home() && ! is_front_page() ) : ?>
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>		
+						<?php
+						endif;
+						/*
+						* Include the Post-Format-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/content-thumbnail', get_post_format() );
+					else :
+						get_template_part( 'template-parts/content', 'none' );
+					endif; ?>
+				</div>
+			</div>
+		</section>
+		<section class="section-services">
+			<div class="container">
+				<div class="row">
+					<h2>Servicios</h2>
+					<?php
+					if ( have_posts() ) :
+						
+						if ( is_home() && ! is_front_page() ) : ?>
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>		
+						<?php
+						endif;
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+						/*
+						* Include the Post-Format-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/service-thumbnail', get_post_format() );
+					else :
+						get_template_part( 'template-parts/content', 'none' );
+					endif; ?>
+				</div>
+			</div>
+		</section>
+		<section class="section-call">
+			<div class="container">
+				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/condon.png" alt="">
+				<h3>
+					¿Necesitas ayuda?
+					<a href="tel:50278675235"><i class="flaticon-technology"></i> (502) 7867-5235</a>
+					¡Llámanos!
+				</h3>
+			</div>
+		</section>
+		<section class="section-opinions">
+			<div class="container">
+				<h2>Lo que opinan de nosotros</h2>
+				<div class="col-xs-12 col-md-6 col-md-offset-3 opinion">
+					<div class="col-xs-3">
+						<img width="100" height="100" i src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/enrique.jpg" alt="">
+					</div>
+					<div class="col-xs-9">
+						<div class="opinion-box-right">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt natus quam porro eveniet ullam iste optio inventore saepe corrupti. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-md-offset-3 opinion">
+					<div class="col-xs-9">
+						<div class="opinion-box-left">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt natus quam porro eveniet ullam iste optio inventore saepe corrupti. 
+							</p>
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<img width="100" height="100"   src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/enrique.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="container">
+			<?php echo do_shortcode("[smls id='129']"); ?>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
