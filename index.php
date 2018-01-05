@@ -72,16 +72,9 @@ get_header(); ?>
 				</div>
 			</div>
 		</section>
-		<section class="section-call">
-			<div class="container">
-				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/condon.png" alt="">
-				<h3>
-					¿Necesitas ayuda?
-					<a href="tel:50278675235"><i class="flaticon-technology"></i> (502) 7867-5235</a>
-					¡Llámanos!
-				</h3>
-			</div>
-		</section>
+
+		<?php get_template_part( 'template-parts/call', get_post_format() );?>
+		
 		<section class="section-opinions">
 			<div class="container">
 				<h2>Lo que opinan de nosotros</h2>

@@ -15,7 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="profile" href="http://emejias.com">
 
 	<?php wp_head(); ?>
 </head>
@@ -34,13 +34,13 @@
 					<?php the_custom_logo(); ?>
                 </a>
 
-                <a href="<?php echo get_page_link(27) ?>" class="btn btn-primary navbar-btn pull-right hidden-md hidden-lg" type="button">Donar</a>
+                <a href="<?php echo get_page_link(27) ?>" class="btn  btn-purple pull-right hidden-md hidden-lg" type="button">Donar</a>
 
             </div>
 
             <div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<a href="donar.html" class="btn btn-primary navbar-btn hidden-xs hidden-sm" type="button">Donar</a>
+					<a href="donar.html" class="btn  btn-purple hidden-xs hidden-sm" type="button">Donar</a>
 				</ul>
 				<?php
 					wp_nav_menu( array(

@@ -9,7 +9,7 @@
 	?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
-	<div class="col-xs-12 col-sm-4 col-md-6">
+	<div class="col-xs-12 col-sm-6 col-md-6">
 		<div class="thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail('460-245'); ?>

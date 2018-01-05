@@ -1,9 +1,4 @@
-.col-margin-bottom-2{
-	margin-bottom: 2em;
-}
-.absolute{
-	position: absolute;
-}
+
 .navbar{
 	border-radius: 0;
 	margin-bottom: 0;
@@ -54,20 +49,7 @@
 
 		}
 	}
-	.navbar-btn{
-		background: $second-color;
-		box-shadow: 0px 4px 16px #34495e;
-		//border-radius:0;
-		border-color: transparent;
-		margin:{
-			right: 10px;
-			left: 10px;
-		};
-		&:hover{
-			box-shadow: none;
-			background-color: darken($second-color, 10%);
-		}
-	}
+	
 }
 .navbar-right{
 	margin-right: 1px;
@@ -242,7 +224,8 @@
 		//border: none;
 		padding: 0;
 		background-color: #ecf0f1;
-		border-radius: 0 0 4px 4px;
+		border-radius: 0 0 0px 0px;
+		border-color: $gray-light!important;
 	    p{
 	    	text:{
 	    		align: left;
@@ -309,7 +292,7 @@
 			border-color: transparent !important;
 		}
 		.btn-sm{
-			border-radius: 10px !important ;
+			border-radius: 5px !important ;
 			box-shadow: 0px 2px 8px #888888 !important;
 
 		}
@@ -343,10 +326,8 @@
 }
 .section-services{
 	h2{
-		text:{
-			align: center;
-			transform: uppercase;
-		};
+		text-align: center;
+		text-transform: uppercase;
 		color: $main-color;
 		font-weight: 500;
 		letter-spacing: 2px;
@@ -374,78 +355,18 @@
 		}
 
     }
-	.thumb-cap{
-		h3{
-			text-transform: uppercase;
-			color: $cap-color;
-		}
-		.btn-custom{
-			@include btn-services($cap-color);
-		}
-		
+	.section-cap{	
+		@include service($cap-color);
 	}
-	.thumb-consult{
-		h3{
-			text-transform: uppercase;
-			color: $consult-color;
-		}
-		.btn-custom{
-			@include btn-services($consult-color);
-		}
-		
-	}
-	.thumb-asesory{
-		h3{
-			text-transform: uppercase;
-			color: $ase-color;
-		}
-		.btn-custom{
-			@include btn-services($ase-color);
-		}
-	}
-	
-	.thumb-camping{
-		h3{
-			text-transform: uppercase;
-			color: $camping-color;
-		}
-		.btn-custom{
-			@include btn-services($camping-color);
-		}
-	}
-}
+	.section-consult{
+		@include service($consult-color);
 
-.btn-custom{
-	@include btn-services($cap-color);
-}
-.section-trust{
-	margin-top: 5px;
-	text-align: center;
-	//padding: 5px;
-	background: white; /* For browsers that do not support gradients */
-	/* For Safari 5.1 to 6.0 */
-	background: -webkit-linear-gradient(left,#ecf0f1,white,white, #ecf0f1);
-	/* For Opera 11.1 to 12.0 */
-	background: -o-linear-gradient(left,#ecf0f1,white,white, #ecf0f1);
-	/* For Fx 3.6 to 15 */
-	background: -moz-linear-gradient(left,#ecf0f1,white,white, #ecf0f1);
-	/* Standard syntax */
-	background: linear-gradient(to right, #ecf0f1,white,white, #ecf0f1);
-
-	img{
-		max-height: 100px;
-		vertical-align: middle
 	}
-	h2{
-		padding-top:1em;
-		text:{
-			padding: 5px;
-			align: center;
-			transform: uppercase;
-		};
-		color: $second-color;
-		font-weight: 500;
-		letter-spacing: 2px;
+	.section-asesory{
+		@include service($ase-color);
+	}
+	.section-camping{
+		@include service($camping-color);
 	}
 }
 
@@ -480,35 +401,7 @@
 		}
 	}
 }
-.section-a{
-	padding: 30px 0;
-	text-align: center;
-	background: $main-color;
-	color: set-text-color($main-color) !important;
-	.fa{
-		font-size: $icon-size;
-	}
-}
 
-.section-b{
-	background: #e6ebf1;
-	padding:30px 0;
-	img{
-		width: 100%
-	}
-	.panel-heading h4{
-		color: set-text-color($main-color) !important;
-	}
-}
-.section-c{
-	padding:60px 0;
-	background: $main-color;
-	text-align: center;
-	color: set-text-color($main-color) !important;
-	.btn-primary{
-		background: darken($main-color, 10);
-	}
-}
 .about {
 	background-image: url(./assets/img/bg_right.png),
 	url(./assets/img/bg_left.png);
@@ -571,183 +464,34 @@
 		margin-left: 1em;
 	}
 }
-.section-what-do{
-	padding-top: 3em;
-	.thumbnail{
-		border-color: transparent;
-		background-color: transparent;
-		height: 160px;
-		text-align:center;
-		p{
-			text-align: center !important;
-		}
-	}
-	//background: #ecf0f1;
-	font-size: 16px;
-	h2{
-		text-transform: uppercase;
-	}
-	a{
-		padding: 20px 5px;
-		text-transform: capitalize;
-		font-size: 1em;
-		border-radius: 5px;
-		text-align: center;
-		&:hover{
-			text-decoration: none;
-			color: $second-color !important;
-		}
 
-		color: black !important;
-		[class^="flaticon-"]:before{
-			font-size: 2.5em;
-			color: $second-color;
-			margin-left: 0;
-		}
+.sub-nav{
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: rgba($main-color, .5);
+	text-align: center;
+	height: 4em;
+	z-index: 9999;
+	li{
+		display: inline-block;
+		height: 4em;
 
-	}
-}
-.section-why{
-	h2{
-		text:{
-			align: center;
-			transform: uppercase;
-		};
-	}
-}
-.section-how{
-	//background-color: rgba(#ecf0f1, .3);
-	[class^="flaticon-"]:before{
-		font-size: 1.5em;
-		color: $second-color;
-	}
-	h2{
-		text-align: center;
-		color: $gray;
-		font-size: 1.5em;
-		i{
-			margin-right:1em
-		}
-	}
-	p{
-		text-align: justify;
-		font-size: 16px;
-	}
-}
-
-.services-header{
-
-	background: url(../img/services.jpg) no-repeat 0 -100px{
-		position: initial;
-		size: cover;
-	};
-	//height: 600px;
-	//padding: 30px 0;
-	a{
-		color: set-text-color($main-color) !important;
-	}
-	.nav{
-		background-color: rgba($gray, .4);
-		text-align: center;
-		z-index: 9999;
-		li{
-			display: inline-block;
-			a{
-				&:hover{
-					background-color: $main-color;
-				}
-				p{
-					font-size: 1em !important;
-				}
-				[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-				[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-				    font-size: 30px;
-					margin-left: 0 !important;
-				}
+		a{
+			color: #F5F5F5;
+			font-size: 1.2em;
+			height: 100%;
+			display: block;
+			line-height: 3.5em;
+			padding: 0 5px;
+			&:hover{
+				background-color: $main-color;
+				text-decoration: none;
 			}
-		}
-	}
-	.jum{
-		background-color: rgba($gray, .6);
-		padding: 1em;
-		border-radius: 5px;
-	}
-	h1{
-		//text-align: center;
-		font-size: 2em;
-		color: set-text-color($main-color) !important;
-		line-height: inherit;
-		text-shadow: 2px 2px $gray;
-		text-transform: uppercase;
-	}
-	p{
-		//background-color: rgba($gray, .4);
-		color: set-text-color($main-color) !important;
-		font-size: 24px;
-		padding: 10px 6px;
-		border-radius: 5px;
-	}
-	.container{
-		padding:20px 30px 30px 30px;
-	}
-	&-capa{
-		background-image: url(../img/capa.jpg);
-		.container-color{
-			//background-color: rgba($cap-color, .4);
-		}
-	}
-	&-asesory{
-		background-image: url(../img/capa.jpg);
-		.container-color{
-			//background-color: rgba($ase-color, .4);
-		}
-	}
-	&-consulting{
-		background-image: url(../img/consultas.jpg);
-		.container-color{
-			//background-color: rgba($consult-color, .4);
-		}
-	}
-	&-camping{
-		background-image: url(../img/campamentos.jpg);
-		.container-color{
-			//background-color: rgba($camping-color, .4);
+			
 		}
 	}
 }
-.capa-container{
-	@include service-pages($cap-color);
-}
-.ase-container{
-	@include service-pages($ase-color);
-}
-.consulting-container{
-	@include service-pages($consult-color);
-}
-.camping-container{
-	@include service-pages($camping-color);
-}
-/*
-.services-container{
-	h2{
-		color: $second-color;
-		text-align: center;
-		border-bottom: 2px solid $second-color;
-	}
-	.thumb-cap{
-		@include thumb-service($cap-color);
-	}
-	.thumb-asesory{
-		@include thumb-service($ase-color);
-	}
-	.thumb-consult{
-		@include thumb-service($consult-color);
-	}
-	.thumb-camping{
-		@include thumb-service($camping-color);
-	}
-}
-*/
 
 footer{
 	//padding-top: 50px !img-responsive;
@@ -874,9 +618,74 @@ footer{
 	}
 }
 
+
+//btn
+.btn-tanuxil{
+	background: $main-color;
+	box-shadow: 0px 4px 16px #34495e;
+	color: white;
+	border-color: transparent;
+	margin:{
+		right: 10px;
+		left:  10px;
+		top:   10px;
+	};
+	&:hover{
+		box-shadow: none;
+		background-color: darken($main-color, 10%);
+		border-color: $main-color;
+		color: white;
+	}
+	&:active{
+		box-shadow: none;
+		background-color: $main-color;
+		border-color: $main-color;
+		color: white;
+	}
+	&:focus{
+		color: white;
+		box-shadow: none;
+		background-color: $main-color;
+		border-color: $main-color;
+	}
+}
+.btn-purple{
+	background: $second-color;
+	box-shadow: 0px 4px 16px #34495e;
+	color: white;
+	border-color: lighten($second-color, 10%);
+	margin:{
+		right: 10px;
+		left:  10px;
+		top:   10px;
+	};
+	&:hover{
+		box-shadow: none;
+		background-color: darken($second-color, 10%);
+		border-color: $second-color;
+		color: white;
+	}
+	&:active{
+		box-shadow: none;
+		background-color: $second-color;
+		border-color: $second-color;
+		color: white;
+	}
+	&:focus{
+		color: white;
+		box-shadow: none;
+		background-color: $second-color;
+		border-color: $second-color;
+	}
+}
 .btn-circle{
 	border-radius: 50%;
 }
+
+.text-capitalize{
+	text-transform: capitalize !important;
+}
+//utilities
 .divider{
 	display: block;
 	box-shadow: 0 2px 5px black;
@@ -884,8 +693,55 @@ footer{
 	height: 1px;
 	margin-bottom: 1em;
 }
+.absolute{
+	position: absolute;
+}
+.relative{
+	position: relative;
+}
+.col-margin-bottom-2{
+	margin-bottom: 2em;
+}
+.col-margin-top-2{
+	margin-bottom: 2em !important;
+}
+.text-white{
+	color: $white-color !important;
+}
+.text-main-color{
+	color: $main-color !important;
+}
+.text-second-color{
+	color: $second-color !important;
+}
+.border-second-color{
+	margin-bottom: 2em;
+	border-bottom: 2px solid $second-color !important;
+}
 
+.page-title-content{
+	margin-bottom: 2em;
+}
+.bg-second-color{
+	background-color: rgba($second-color, 0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.bg-gray-color{
+	background-color: rgba($gray, 0.5) !important;
+	padding: 1em;
+}
 
+.margin-top-sub-nav{
+	margin-top: 3em;
+}
+
+.text-underline{
+	text-decoration: underline;
+}
 
 //nuevos
 .section-call{
@@ -980,4 +836,17 @@ footer{
 		}
 	}
 
+}
+
+//wp
+.wpcf7-list-item{
+	display: block !important;
+}
+
+.entry-meta{
+	padding: 5px 1em;
+	//position: absolute;
+	//left: 0;
+	//right: 0;
+	background-color: rgba($white-color, .7)
 }

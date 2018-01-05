@@ -19,10 +19,10 @@
 			'post_status' => 'publish'
 		);
 		$pages = get_pages($args);
-
+	
 	//$pages = get_pages();
 	foreach ($pages as $page) { ?>
-		<div class="col-xs-12 col-sm-6">
+		<div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="thumbnail <?php echo $page->class ?>">
 				<?php echo get_the_post_thumbnail( $post = $page->ID, '460-245', $attr = '' ) ?>
 				<h3 class="text-center"><?php echo $page->post_title ?></h3>

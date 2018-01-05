@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area container section-notices">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 		<?php
@@ -24,7 +24,6 @@ get_header(); ?>
 
 			<?php
 			/* Start the Loop */
-			$count=1;
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -32,17 +31,12 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				include TEMPLATEPATH."/template-parts/content.1.php";
-				$count++;
+				get_template_part( 'template-parts/content', get_post_format() );
 
+			endwhile;
 
-			endwhile;  ?>
+			the_posts_navigation();
 
-			<div class="container">
-				<?php the_posts_navigation(); ?>
-			</div>
-
-			<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -53,7 +47,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-
-get_template_part( 'template-parts/call', get_post_format() );
-//get_sidebar();
+get_sidebar();
 get_footer();

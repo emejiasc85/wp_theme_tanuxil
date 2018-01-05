@@ -21,12 +21,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 @import 'assets/css/flaticon.css';
+@import 'assets/css/font-awesome.css';
 @import 'custom_variables';
 @import 'mixins';
 @import 'functions';
 @import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap-compass';
-//@import './node_modules/font-awesome-sass/assets/stylesheets/font-awesome';
-//@import './node_modules/slick-carousel/slick/slick.scss';
-//@import './node_modules/slick-carousel/slick/slick-theme.scss';
 @import './custom';
