@@ -40,7 +40,7 @@
 
             <div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<a href="donar.html" class="btn  btn-purple hidden-xs hidden-sm" type="button">Donar</a>
+					<a href="<?php echo get_page_link(27) ?>" class="btn  btn-purple hidden-xs hidden-sm" type="button">Donar</a>
 				</ul>
 				<?php
 					wp_nav_menu( array(

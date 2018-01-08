@@ -6753,28 +6753,173 @@ button.close {
   .section-services .section-camping div.wpcf7-validation-errors:before {
     content: '\f057'; }
 
-.section-subcription {
-  padding: 60px 0;
-  text-align: center;
-  color: #ffffff !important; }
-  .section-subcription h2 {
-    text-align: center;
+.section-services .section-purple {
+  /* Small devices (tablets, 768px and up) */ }
+  .section-services .section-purple h3, .section-services .section-purple h1 {
     text-transform: uppercase;
-    color: #8E44AD;
-    font-weight: 500;
-    letter-spacing: 2px; }
-  .section-subcription .form-control {
-    padding: 30px 16px;
-    background-color: #eeeeee; }
-  .section-subcription .btn-default {
-    color: #8E44AD;
-    border: 1px solid #8E44AD;
-    font-weight: bold;
-    box-shadow: 0px 4px 16px grey;
-    padding: 18px 16px;
-    background-color: #eeeeee !important; }
-    .section-subcription .btn-default:hover {
-      background-color: #F5F5F5 !important; }
+    color: #8E44AD; }
+  .section-services .section-purple h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px #555555;
+    text-transform: uppercase; }
+  .section-services .section-purple .btn-custom {
+    display: inline-block;
+    background-color: #8E44AD;
+    padding: 4px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    border-radius: 6px;
+    position: relative; }
+    .section-services .section-purple .btn-custom::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: white;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      box-shadow: inset 2px 1px 4px rgba(0, 0, 0, 0.3); }
+    .section-services .section-purple .btn-custom span {
+      letter-spacing: 1px;
+      display: block;
+      background-color: #8E44AD;
+      position: relative;
+      z-index: 2;
+      padding: 0 5px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 4px;
+      box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3); }
+      .section-services .section-purple .btn-custom span:hover {
+        background-color: #ad6fc7; }
+      .section-services .section-purple .btn-custom span:active {
+        background-color: #8E44AD; }
+      .section-services .section-purple .btn-custom span:focus {
+        background-color: #8E44AD; }
+  .section-services .section-purple option {
+    color: #8E44AD !important; }
+  .section-services .section-purple ul {
+    padding: 0; }
+    .section-services .section-purple ul li {
+      list-style: none; }
+      .section-services .section-purple ul li p::before {
+        font-size: 1.5em;
+        font-family: FontAwesome;
+        content: "\f111";
+        display: inline-block;
+        vertical-align: top;
+        color: #8E44AD;
+        background: #dddddd;
+        border-radius: 50%;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        box-shadow: inset 0 1px 2px grey; }
+      .section-services .section-purple ul li p span {
+        margin-left: .8em;
+        display: inline-block;
+        width: 85%; }
+      .section-services .section-purple ul li ul li {
+        width: 100%;
+        list-style: none !important; }
+        .section-services .section-purple ul li ul li p::before {
+          content: none; }
+        .section-services .section-purple ul li ul li p span {
+          margin-left: 0; }
+  @media (min-width: 768px) {
+    .section-services .section-purple ul li {
+      display: inline-grid;
+      width: 48%; }
+      .section-services .section-purple ul li p::before {
+        vertical-align: middle; }
+      .section-services .section-purple ul li ul {
+        padding-left: 3em !important; } }
+  .section-services .section-purple input[type="radio"] {
+    display: none; }
+  .section-services .section-purple .wpcf7-list-item-label {
+    color: #777777;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 16px; }
+    .section-services .section-purple .wpcf7-list-item-label::before {
+      margin-right: .5em;
+      color: #bbbbbb;
+      font-size: 1.5em;
+      font-family: FontAwesome;
+      content: "\f111";
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 30px;
+      background: #dddddd;
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      box-shadow: inset 0 1px 2px grey; }
+  .section-services .section-purple .form-group > label {
+    font-weight: 400 !important; }
+  .section-services .section-purple input[type=radio]:checked + .wpcf7-list-item-label {
+    color: #ad6fc7; }
+    .section-services .section-purple input[type=radio]:checked + .wpcf7-list-item-label::before {
+      margin-right: .5em;
+      color: #8E44AD;
+      font-size: 1.5em;
+      font-family: FontAwesome;
+      content: "\f111";
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 30px;
+      background: #dddddd;
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      box-shadow: inset 0 1px 2px grey; }
+  .section-services .section-purple .form-control {
+    box-shadow: inset 0 2px 7px #555555;
+    background: #fbfbfb;
+    padding: 20px 10px;
+    color: #555555 !important;
+    border-radius: 10px;
+    border-color: transparent; }
+  .section-services .section-purple .wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
+    z-index: 9999;
+    display: inline-block;
+    color: #D8000C;
+    background-color: #FFBABA;
+    border: 0;
+    padding: 10px; }
+  .section-services .section-purple .wpcf7-form .wpcf7-response-output {
+    position: fixed;
+    z-index: 9999;
+    right: -7px;
+    top: 0; }
+  .section-services .section-purple .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+    color: #16A085;
+    background-color: #DFF2BF;
+    border: 0;
+    padding: 10px;
+    top: 12em; }
+  .section-services .section-purple div.wpcf7-mail-sent-ok:before, .section-services .section-purple div.wpcf7-validation-errors:before {
+    font: 26px/30px FontAwesome;
+    margin-right: 16px;
+    vertical-align: middle; }
+  .section-services .section-purple div.wpcf7-mail-sent-ok:before {
+    content: url("./assets/img/condon.png");
+    position: absolute;
+    top: -3.5em;
+    right: 10.5em; }
+  .section-services .section-purple div.wpcf7-validation-errors:before {
+    content: '\f057'; }
 
 .about {
   background-image: url(./assets/img/bg_right.png), url(./assets/img/bg_left.png);
