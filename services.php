@@ -12,7 +12,7 @@ get_header(); ?>
 				<div class="margin-top-sub-nav col-xs-12 col-md-6 bg-gray-color">
 					<h2 class="text-white "><?php echo $post->description ?></h2>
 					<p>
-						<a href="" class="btn btn-lg  btn-purple">Cotizar</a>
+						<a href="<?php echo get_page_link($post->form_id) ?>" class="btn btn-lg  btn-purple">Cotizar</a>
 					</p>
 				</div>
 			</div>

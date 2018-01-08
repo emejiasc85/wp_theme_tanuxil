@@ -16,7 +16,7 @@ get_header(); ?>
 								<h1 class="text-white"><?php  the_title(); ?></h1>
 								<p class="text-white "><?php echo $post->description ?></p>
 								<p>
-									<a href="<?php echo get_page_link(172) ?>" class="btn-custom"><span>Cotizar Servicio.</span></a>
+									<a href="<?php echo get_page_link($post->form_id) ?>" class="btn-custom"><span>Cotizar Servicio.</span></a>
 								</p>
 							</div>
 						</div>
@@ -31,7 +31,7 @@ get_header(); ?>
 							<?php the_content()?>
 						</div>
 						<div class="text-center">
-							<a href="<?php echo get_page_link(172) ?>" class="btn-custom"><span>Cotizar Servicio.</span></a>
+							<a href="<?php echo get_page_link($post->form_id) ?>" class="btn-custom"><span>Cotizar Servicio.</span></a>
 						</div>
 					</div>	
 			</div>
