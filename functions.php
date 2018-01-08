@@ -15,6 +15,17 @@ if ( ! function_exists( 'tanuxil_setup' ) ):
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
+
+	function jptweak_remove_share() {
+		remove_filter( 'the_content', 'sharing_display', 19 );
+		remove_filter( 'the_excerpt', 'sharing_display', 19 );
+		if ( class_exists( 'Jetpack_Likes' ) ) {
+			remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+		}
+	}
+	
+	add_action( 'loop_start', 'jptweak_remove_share' );
+
 	function tanuxil_setup() {
 		update_option( 'siteurl', 'http://tanuxil-wp.em' );
 		update_option( 'home', 'http://tanuxil-wp.em' );
@@ -46,7 +57,9 @@ if ( ! function_exists( 'tanuxil_setup' ) ):
 		/**
 		 * add new cutter for images upload
 		 */
+		//set_post_thumbnail_size( );
 		add_image_size( '460-245', 460, 245, true);
+		add_image_size( '84-84', 84, 84, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
