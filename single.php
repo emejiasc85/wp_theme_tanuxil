@@ -19,6 +19,7 @@ get_header(); ?>
 
 			//the_post_navigation();
 			
+			get_template_part( 'template-parts/call', get_post_format() );
 			include_once('_wptricks-sp-navigation.php');
 
 			// If comments are open or we have at least one comment, load up the comment template.
@@ -42,6 +43,5 @@ get_header(); ?>
 
 	
 
-get_template_part( 'template-parts/call', get_post_format() );
 //get_sidebar();
 get_footer();

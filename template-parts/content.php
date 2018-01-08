@@ -29,7 +29,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content margin-top-sub-nav">
+	<div class="entry-content margin-top-sub-nav col-margin-bottom-2">
 		<?php
 			the_content( sprintf(
 				wp_kses(
