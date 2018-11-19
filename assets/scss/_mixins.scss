@@ -11,7 +11,7 @@
 	text-decoration: none;
 	border-radius: 6px;
 	position: relative;
-	
+
 	&::before {
 		content: "";
 		display: block;
@@ -25,7 +25,7 @@
 		border-radius: 6px;
 		box-shadow: inset 2px 1px 4px rgba(0, 0, 0, 0.3);
 	}
-	
+
 	span {
 		letter-spacing: 1px;
 		display: block;
@@ -49,11 +49,11 @@
 			background-color: $bg;
 		}
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }
 @mixin service($bg){
 	h3, h1{
@@ -111,16 +111,16 @@
 						span{
 							margin-left: 0;
 						}
-						
+
 					}
 				}
 			}
 		}
 	}
 
-	
+
 	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) { 
+	@media (min-width: 768px) {
 		ul{
 			li{
 				display: inline-grid;
@@ -137,12 +137,12 @@
 		}
 	}
 	//wp contact form 7
-	
+
 	input[type="radio"] {
 		display: none;
-		
+
 	}
-	  
+
 	.wpcf7-list-item-label {
 		color: $gray-light;
 		display: block;
@@ -178,7 +178,7 @@
 		color: lighten($bg, 13.5%);
 		&::before{
 			margin-right: .5em;
-			
+
 			color: $bg;
 			font-size: 1.5em;
 			font-family: FontAwesome;
@@ -234,15 +234,15 @@
 	}
 	div.wpcf7-mail-sent-ok:before {
 		//content:'\f00c';
-		content:url("./assets/img/condon.png");
+		/* content:url("./assets/img/condon.png"); */
 		position: absolute;
 		top: -3.5em;
 		right: 10.5em;
 	}
 	div.wpcf7-validation-errors:before {
 		content:'\f057';
-		
+
 	}
-	
+
 
 }

@@ -8,17 +8,16 @@
  */
 
 get_header(); ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
+	<section class="section-notices">
+			<div class="container">
+				<div class="row">
+					<?php
 		if ( have_posts() ) : ?>
-
+			
 			<header class="page-header">
 				<h1 class="page-title"><?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'tanuxil' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Buscando Resultados: %s', 'tanuxil' ), '<span>' . get_search_query() . '</span>' );
 				?></h1>
 			</header><!-- .page-header -->
 
@@ -42,10 +41,9 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			</div>
+	</section>
+	
 
 <?php
-get_sidebar();
 get_footer();

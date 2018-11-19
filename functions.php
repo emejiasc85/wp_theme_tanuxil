@@ -25,7 +25,7 @@ if ( ! function_exists( 'tanuxil_setup' ) ):
 	}
 	
 	add_action( 'loop_start', 'jptweak_remove_share' );
-
+	add_filter('widget_text', 'do_shortcode');
 	function tanuxil_setup() {
 		update_option( 'siteurl', 'http://tanuxil-wp.em' );
 		update_option( 'home', 'http://tanuxil-wp.em' );
@@ -133,14 +133,71 @@ function tanuxil_widgets_init() {
 }
 add_action( 'widgets_init', 'tanuxil_widgets_init' );
 
+
+function index_carroussel()
+    {
+         register_sidebar([
+            'id'            => 'index_carroussel',
+            'name'          => 'Index Carroussel',
+            'description'   => 'colocar la configuracion del carroussel',
+            'before_widget' => '',
+            'after_widget'  => '',
+        ]);
+    }
+add_action('widgets_init', 'index_carroussel' );
+function trust_carroussel()
+    {
+         register_sidebar([
+            'id'            => 'trust_carroussel',
+            'name'          => 'Confianza Carroussel',
+            'description'   => 'colocar la configuracion del carroussel de empresas que confian en noso',
+            'before_widget' => '',
+            'after_widget'  => '',
+        ]);
+    }
+add_action('widgets_init', 'trust_carroussel' );
+
+function pet()
+    {
+         register_sidebar([
+            'id'            => 'pet',
+            'name'          => 'mascota',
+            'description'   => 'colocar imagen de mascota',
+            'before_widget' => '',
+            'after_widget'  => '',
+        ]);
+    }
+add_action('widgets_init', 'pet' );
+function logo_certificate()
+    {
+         register_sidebar([
+            'id'            => 'logo_certificate',
+            'name'          => 'logo de certificado',
+            'description'   => 'colocar logo de certificacion ',
+            'before_widget' => '',
+            'after_widget'  => '',
+        ]);
+    }
+add_action('widgets_init', 'logo_certificate' );
+function text_certificate()
+    {
+         register_sidebar([
+            'id'            => 'text_certificate',
+            'name'          => 'texto de certificado',
+            'description'   => 'colocar texto de certificacion ',
+            'before_widget' => '',
+            'after_widget'  => '',
+        ]);
+    }
+add_action('widgets_init', 'text_certificate' );
 /**
  * Enqueue scripts and styles.
  */
 function tanuxil_scripts() {
 	wp_enqueue_style( 'tanuxil-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'jq', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.js', array(), '20151215', true );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', array(), '20151215', true );
+	wp_enqueue_script( 'jq', get_template_directory_uri() . '/assets/js/jquery.js' );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js' );
 	//wp_enqueue_script( 'slick', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.js', array(), '20151215', true );
 	
 	wp_enqueue_script( 'tanuxil-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

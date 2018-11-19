@@ -12,7 +12,7 @@ get_header(); ?>
 			<div class="container">
 				<div class="col-xs-12  col-md-8 col-md-offset-2">
 					<h1>tanux´il</h1>
-					<h4 class="text-center">"Por El Desarrollo Integral de lasjuventudes"</h4>
+					<h4 class="text-center">"Por El Desarrollo Integral de las juventudes"</h4>
 		
 					<div class="col-xs-12 col-md-6">
 						<p>Somos una organización que trabaja con adolescentes y jóvenes en el departamento de Petén, Guatemala.</p>

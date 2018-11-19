@@ -6242,7 +6242,7 @@ button.close {
     margin-right: 16px;
     vertical-align: middle; }
   .section-services .section-cap div.wpcf7-mail-sent-ok:before {
-    content: url("./assets/img/condon.png");
+  /*   content: url("./assets/img/condon.png"); */
     position: absolute;
     top: -3.5em;
     right: 10.5em; }
@@ -6410,7 +6410,7 @@ button.close {
     margin-right: 16px;
     vertical-align: middle; }
   .section-services .section-consult div.wpcf7-mail-sent-ok:before {
-    content: url("./assets/img/condon.png");
+  /*   content: url("./assets/img/condon.png"); */
     position: absolute;
     top: -3.5em;
     right: 10.5em; }
@@ -6578,7 +6578,7 @@ button.close {
     margin-right: 16px;
     vertical-align: middle; }
   .section-services .section-asesory div.wpcf7-mail-sent-ok:before {
-    content: url("./assets/img/condon.png");
+  /*   content: url("./assets/img/condon.png"); */
     position: absolute;
     top: -3.5em;
     right: 10.5em; }
@@ -6746,7 +6746,7 @@ button.close {
     margin-right: 16px;
     vertical-align: middle; }
   .section-services .section-camping div.wpcf7-mail-sent-ok:before {
-    content: url("./assets/img/condon.png");
+  /*   content: url("./assets/img/condon.png"); */
     position: absolute;
     top: -3.5em;
     right: 10.5em; }
@@ -6914,17 +6914,27 @@ button.close {
     margin-right: 16px;
     vertical-align: middle; }
   .section-services .section-purple div.wpcf7-mail-sent-ok:before {
-    content: url("./assets/img/condon.png");
+  /*   content: url("./assets/img/condon.png"); */
     position: absolute;
     top: -3.5em;
     right: 10.5em; }
   .section-services .section-purple div.wpcf7-validation-errors:before {
     content: '\f057'; }
-
-.about {
+.about::after{
+  content: "";
   background-image: url(./assets/img/bg_right.png), url(./assets/img/bg_left.png);
   background-position: right top, left top;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.about {
+  position: relative;
   margin-bottom: 2em; }
   .about img {
     margin: 0 auto;

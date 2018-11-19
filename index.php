@@ -13,11 +13,7 @@
  */
 
 get_header(); ?>
-
-	<?php 
-		//slider
-		echo do_shortcode('[slick-slider category="3" design="design-1" sliderheight="800" show_content="true"]'); 
-	?>
+	<?php  dynamic_sidebar('index_carroussel'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -74,10 +70,10 @@ get_header(); ?>
 		</section>
 
 		<?php get_template_part( 'template-parts/call', get_post_format() );?>
-		
 		<section class="section-opinions">
 			<div class="container">
-				<h2>Lo que opinan de nosotros</h2>
+				<h2>Ellos confian en nosotros</h2>
+		       <!--
 				<div class="col-xs-12 col-md-6 col-md-offset-3 opinion">
 					<div class="col-xs-3">
 						<img width="100" height="100" i src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/enrique.jpg" alt="">
@@ -102,10 +98,11 @@ get_header(); ?>
 						<img width="100" height="100"   src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/enrique.jpg" alt="">
 					</div>
 				</div>
+			-->
 			</div>
 		</section>
 		<div class="container">
-			<?php echo do_shortcode("[smls id='129']"); ?>
+			<?php  dynamic_sidebar('trust_carroussel'); ?>
 		</div>
 
 		</main><!-- #main -->

@@ -19,12 +19,14 @@
 
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
+                    <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Buscar">
+                        <input type="text" placeholder="" name="s" id="search" class="form-control" placeholder="Buscar">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><i class="flaticon-magnifying-glass"></i></button>
+                            <button class="btn btn-default" type="submit"><i class="flaticon-magnifying-glass"></i></button>
                         </span>
                     </div><!-- /input-group -->
+                    </form>
                 </div><!-- /.col-lg-6 -->
             </div>
             <br/>

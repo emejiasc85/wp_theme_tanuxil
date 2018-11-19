@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="section-services">
 			<div class="<?php echo $post->class ?>">
-					<div class="jumbotron" style="background-image: url(<?php echo the_post_thumbnail_url()?>); background-position: left; height:40em;">
+					<div class="jumbotron" style="background-image: url(<?php echo the_post_thumbnail_url()?>); background-position: left; height:40em; background-size: cover;">
 						<div class="container">
 							<div class="margin-top-sub-nav col-xs-12 col-md-6 bg-gray-color">
 								<h1 class="text-white"><?php  the_title(); ?></h1>
@@ -50,3 +50,5 @@ get_header(); ?>
 	<?php
 	//get_sidebar();
 	get_footer();
+
+	
